@@ -2797,7 +2797,7 @@ figcaption {
 .footer {
     background-color: var(--black);
     padding-top: 100px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     position: relative;
     overflow: hidden;
 }
@@ -7225,6 +7225,8 @@ figcaption {
         width: auto;
         margin-left: 20px;
         margin-right: 20px;
+        margin-bottom: 20px;
+        margin-top: 20px;
     }
 
     .grid-testimonial-marquee {
