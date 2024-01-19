@@ -1225,7 +1225,7 @@ __p+='`), T
 
             function E(M) {
                 var F = window.document.createElement("iframe");
-                F.src = "https://webflow.com/site/third-party-cookie-check.html", F.style.display = "none", F.sandbox = "allow-scripts allow-same-origin";
+                F.src = "https://webflow.com./site/third-party-cookie-check.html", F.style.display = "none", F.sandbox = "allow-scripts allow-same-origin";
                 var P = function (j) {
                     j.data === "WF_third_party_cookies_unsupported" ? (C(F, P), M(!1)) : j.data === "WF_third_party_cookies_supported" && (C(F, P), M(!0))
                 };

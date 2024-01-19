@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
         try {
             const response = await axios.post('https://mail.suhailroushan.in/api/email/send', data);
             console.log('Email sent successfully:', response);
-            window.location.href("")
+            window.location.href = 'https://csproducts.xyz/form.html';
 
         } catch (error) {
             console.error('Error sending email:', error);
