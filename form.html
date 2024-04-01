@@ -136,9 +136,25 @@
                         id="w-node-f952be59-b82e-ec7a-2119-a8fc8c566d0b-8c566cff"
                         class="brand w-nav-brand">
 
-                        <div class="box1">
-                            <img src="./logos/black.png" loading="eager" alt
-                                class="logos" />
+                        <!-- <img src="./logos/black.png" loading="eager" alt
+                                class="logos" /> -->
+                        <div class="logos">
+                            <!-- <h1 class="hh"> <span
+                                    class="hh">csprojects.xyz</span>
+
+                            </h1> -->
+                            <!-- 
+                            <span
+                                class="title-decoration-three1 hh">
+                                &lt;csprojects.xyz/&gt;
+
+                            </span> -->
+                            <span
+                                class="title-decoration-three1 hh">
+                                csprojects.xyz
+
+                            </span>
+
                         </div>
 
                     </a>
@@ -166,21 +182,34 @@
                 <div class="user-pages-content">
                     <div class="user-pages-title-wrap">
                         <h1 class="user-pages-title">Book A Demo</h1>
-                        <p class="user-page-description">Fill in the details
-                            about your company</p>
+                        <p class="user-page-description">Fill the details
+                        </p>
                     </div>
                     <div class="user-page-form w-form">
                         <form id="wf-form-Company-Inquiry-Form"
                             name="wf-form-Company-Inquiry-Form"
                             data-name="Company Inquiry Form" method="get">
                             <div class="input-group">
+                                <!-- Existing input for company name -->
                                 <input class="form-input w-input"
                                     maxlength="256" name="company-name"
                                     data-name="Company Name"
-                                    placeholder="Company Name" type="text"
-                                    id="company-name"
-                                    required />
+                                    placeholder="Name" type="text"
+                                    id="company-name" required />
+
+                                <!-- New select input for choosing between Company, Individual, or StartUp -->
+                                <select class="form-input w-input"
+                                    name="registration-type"
+                                    id="registration-type" required>
+                                    <option value disabled selected>Select your
+                                        registration type</option>
+                                    <option value="Company">Company</option>
+                                    <option
+                                        value="Individual">Individual</option>
+                                    <option value="StartUp">StartUp</option>
+                                </select>
                             </div>
+
                             <div class="input-group">
                                 <input class="form-input w-input"
                                     maxlength="256" name="email"
@@ -226,7 +255,7 @@
                                 <textarea class="form-input w-input"
                                     name="additional-info"
                                     data-name="Additional Info"
-                                    placeholder="Additional Information About Your Company"
+                                    placeholder="Additional Information About Your Idea"
                                     id="additional-info"
                                     rows="4"></textarea>
                             </div>

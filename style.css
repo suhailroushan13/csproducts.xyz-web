@@ -3104,6 +3104,14 @@ figcaption {
     background-size: auto;
 }
 
+.title-decoration-three1 {
+    background-image: url("https://assets-global.website-files.com/63a2824686627542c1f92d0d/63a2ceb795ab8c7590aeec91_shape-3.svg");
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    padding-bottom: 20px;
+}
+
 .tabs-menu {
     grid-column-gap: 0px;
     grid-row-gap: 0px;

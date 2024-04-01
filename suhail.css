@@ -3,11 +3,13 @@
     justify-content: center;
     text-align: center;
     display: flex;
-    font-family: "Inter", sans-serif !important;
+    font-family: Bevietnampro,
+        sans-serif !important;
     font-optical-sizing: auto;
-    font-weight: 500;
+    font-weight: 300;
     font-style: normal;
-    margin-top: 30px;
+    font-size: 44px;
+    margin-top: 20px;
     margin-right: 10px;
 }
 
@@ -37,12 +39,16 @@
         justify-content: center;
         text-align: center;
         display: flex;
-        font-family: "Inter", sans-serif !important;
+        font-size: 44px;
+        font-family: Bevietnampro,
+
+            sans-serif;
         font-optical-sizing: auto;
         font-weight: 500;
         font-style: normal;
         margin-top: 20px;
-        margin-left: 10px;
+        margin-left: 20px;
+        width: 337px;
     }
 }
 
@@ -53,7 +59,22 @@
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 320px) {
+
     /* Styles */
+    .logos,
+    .hh {
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-size: 40px;
+        font-family: Bevietnampro, sans-serif;
+        font-style: normal;
+        margin-top: 20px;
+        margin-left: 20px;
+        width: 337px;
+    }
 }
 
 /* iPads (portrait and landscape) ----------- */
