@@ -53,7 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Error sending email:", error);
     }
   });
+});
 
+document.addEventListener("DOMContentLoaded", function () {
   // Event listener for the Company Inquiry Form submission
   var companyInquiryForm = document.getElementById(
     "wf-form-Company-Inquiry-Form"
@@ -85,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
         data
       );
       console.log("Email sent successfully:", response);
-      window.location.href = "https://csprojects.xyz/thankyou.html"; // Updated redirection URL
+      window.location.href = "https://csprojects.xyz/"; // Updated redirection URL
     } catch (error) {
       console.error("Error sending email:", error);
     }
