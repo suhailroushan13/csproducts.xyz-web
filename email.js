@@ -3,19 +3,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initialize confetti with defaults
   const defaults = {
-    scalar: 2,
-    spread: 360,
-    particleCount: 5,
+    spread: 180,
+    particleCount: 4,
     startVelocity: 35,
   };
+
+  // Determine if the user is on mobile
+  const isMobile = window.innerWidth < 768; // This threshold can be adjusted
+  console.log(isMobile);
+
+  // Adjust scalar based on device type
+  const scalarValue = isMobile ? 5 : 10;
 
   confetti.create(canvasEl, { resize: true }).then((confettiInstance) => {
     // Function to trigger confetti
     const triggerConfetti = (x, y) => {
       confettiInstance({
         ...defaults,
+        scalar: scalarValue,
         origin: { x, y }, // Use provided position for origin
-        scalar: 10,
         particleCount: 1,
         shapes: ["image"], // For custom images
         shapeOptions: {
