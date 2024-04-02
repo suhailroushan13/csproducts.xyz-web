@@ -1,3 +1,47 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const canvasEl = document.getElementById("my-canvas");
+
+  // Initialize confetti with defaults
+  const defaults = {
+    scalar: 2,
+    spread: 360,
+    particleCount: 5,
+    startVelocity: 35,
+  };
+
+  confetti.create(canvasEl, { resize: true }).then((confettiInstance) => {
+    // Function to trigger confetti
+    const triggerConfetti = (x, y) => {
+      confettiInstance({
+        ...defaults,
+        origin: { x, y }, // Use provided position for origin
+        scalar: 10,
+        particleCount: 1,
+        shapes: ["image"], // For custom images
+        shapeOptions: {
+          image: {
+            src: "https://i.imgur.com/EaDGCYq.png",
+            replaceColor: false,
+            width: 100,
+            height: 100,
+          },
+        },
+      });
+    };
+
+    // Trigger confetti at the center of the screen on page load
+    triggerConfetti(0.5, 0.5);
+
+    // Trigger confetti on mouse clicks
+    document.addEventListener("mousedown", (e) => {
+      // Calculate click position normalized to [0, 1]
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+      triggerConfetti(x, y);
+    });
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   var form = document.getElementById("wf-form-Footer-Subscribe-Form");
 
