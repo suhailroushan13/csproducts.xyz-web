@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const defaults = {
     spread: 180,
     particleCount: 4,
-    startVelocity: 35,
+    gravity:2,
+    startVelocity: 10,
   };
-
   // Determine if the user is on mobile
   const isMobile = window.innerWidth < 768; // This threshold can be adjusted
   console.log(isMobile);
