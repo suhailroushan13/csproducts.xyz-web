@@ -1,0 +1,94 @@
+  /* Custom CSS for the table */
+  .container {
+      margin-top: 50px;
+  }
+
+  h2 {
+      text-align: center;
+      margin-bottom: 30px;
+  }
+
+  th {
+      background-color: #007bff;
+      color: white;
+  }
+
+  th,
+  td {
+      text-align: center;
+      border: 1px solid #ddd;
+      /* Add border lines */
+      padding: 8px;
+      /* Add padding for better appearance */
+  }
+
+  tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+  }
+
+  .card {
+      border: 1px solid #ddd;
+      /* Light grey border */
+      border-radius: 8px;
+      /* Rounded corners */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      /* Subtle shadow */
+
+      /* Spacing inside the card */
+      margin-top: 20px;
+      /* Space above the card */
+      background-color: #fff;
+      /* White background */
+  }
+
+  .card-body {
+      font-size: 26px !important;
+      font-weight: bold;
+      /* Adjust the font size as needed */
+  }
+
+  /* Make only the value bold */
+  #totalCustomers strong {
+      font-weight: bold;
+      font-size: 26px !important;
+
+  }
+
+  tbody tr:hover {
+      background-color: #ddd;
+  }
+
+  #dataTable th:nth-child(5),
+  #dataTable td:nth-child(5) {
+      /* Adjust the width value as needed */
+      width: 350px;
+  }
+
+  .logout-btn {
+      position: fixed;
+      top: 10px;
+      /* Adjust as needed */
+      right: 20px;
+      /* Adjust as needed */
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+  }
+
+  .logout-btn:hover {
+      background-color: darkred;
+  }
+
+  .tooltip {
+      position: absolute;
+      z-index: 999;
+      background: #333;
+      color: #fff;
+      padding: 5px;
+      border-radius: 5px;
+      visibility: hidden;
+  }

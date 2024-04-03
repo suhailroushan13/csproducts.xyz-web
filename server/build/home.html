@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Giga Robotics Visitors Stat's</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="home.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <!-- Use container-fluid to make it full width -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="logout-btn-container">
+                        <button class="logout-btn">Logout</button>
+                    </div>
+
+                    <br>
+                    <h2>Giga Robotics Visitors Stat's</h2>
+
+                    <div class="card">
+                        <div class="card-body" id="totalCustomers">
+
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" id="searchInput"
+                                class="form-control full-width"
+                                placeholder="Search here..."
+                                onkeyup="filterTable()">
+                        </div>
+
+                        <br>
+                        <br>
+                    </div>
+
+                    <br>
+                    <div class="table-responsive">
+                        <!-- Make table responsive -->
+                        <table class="table table-bordered" id="dataTable">
+                            <!-- Add table-bordered class for border -->
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Country</th>
+                                    <th>Message</th>
+                                    <th>Created At</th>
+                                </tr>
+                            </thead>
+                            <tbody id="paymentTableBody">
+                                <!-- Table rows will be inserted here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="./home.js"></script>
+
+    </body>
+</html>

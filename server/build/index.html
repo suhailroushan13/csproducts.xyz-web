@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Page</title>
+        <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <link rel="icon" href="./favicon (1).ico" type="image/x-icon">
+
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <!-- The image half -->
+                <div class="col-md-6 d-none d-md-flex bg-image"></div>
+
+                <!-- The content half -->
+                <div class="col-md-6 bg-light">
+                    <div class="login d-flex align-items-center py-5">
+
+                        <!-- Demo content-->
+                        <div class="container custom-shadow">
+                            <div class="row">
+                                <div class="col-lg-10 col-xl-7 mx-auto">
+                                    <h3 class="display-4">Giga Robotics Login</h3>
+                                    <p class="text-muted mb-4">Enter your login
+                                        details below</p>
+                                    <div id="alertPlaceholder"></div>
+
+                                    <form id="loginForm">
+                                        <div class="form-group mb-3">
+                                            <input id="inputEmail" type="email"
+                                                placeholder="Email address"
+                                                required
+                                                autofocus
+                                                class="form-control rounded-pill border-0 shadow-sm px-4">
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <input id="inputPassword"
+                                                type="password"
+                                                placeholder="Password" required
+                                                class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                                        </div>
+                                        <button type="button"
+                                            class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm"
+                                            onclick="validateLogin()">Sign
+                                            in</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div><!-- End -->
+
+                    </div>
+                </div><!-- End -->
+
+            </div>
+        </div>
+        <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    </body>
+
+</html>

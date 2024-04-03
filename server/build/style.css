@@ -1,0 +1,16 @@
+.bg-image {
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/555/34/486/digital-art-robot-3d-technology-wallpaper-preview.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.login {
+    min-height: 100vh;
+
+}
+
+
+
+.bg-light {
+    background-color: #f7f7f7 !important;
+}
