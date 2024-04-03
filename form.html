@@ -149,8 +149,7 @@
                                 &lt;csprojects.xyz/&gt;
 
                             </span> -->
-                            <span
-                                class="title-decoration-three1 hh">
+                            <span class="title-decoration-three1 hh">
                                 csprojects.xyz
 
                             </span>
@@ -186,9 +185,8 @@
                                 <!-- Existing input for company name -->
                                 <input class="form-input w-input"
                                     maxlength="256" name="company-name"
-                                    data-name="Company Name"
-                                    placeholder="Name" type="text"
-                                    id="company-name" required />
+                                    data-name="Company Name" placeholder="Name"
+                                    type="text" id="company-name" required />
 
                                 <!-- New select input for choosing between Company, Individual, or StartUp -->
                                 <select class="form-input w-input"
@@ -293,14 +291,13 @@
                                 9618211626</a>
                         </div>
 
- <div class="footer-social-wrap">
+                        <div class="footer-social-wrap">
                             <a
                                 href="https://chat.whatsapp.com/LF53rGLcTAP8NW5IP3unRf"
                                 target="_blank"
                                 class="social-item-link w-inline-block">
 
-                                <img
-                                    src="./logos/whatsapp-xxl.png"
+                                <img src="./logos/whatsapp-xxl.png"
                                     class="social-icon">
                             </a>
 
@@ -312,24 +309,21 @@
                                     loading="eager" alt
                                     class="social-icon" /></a>
 
-                            <a
-                                href="https://www.instagram.com/csprojects.xyz"
+                            <a href="https://www.instagram.com/csprojects.xyz"
                                 target="_blank"
                                 class="social-item-link w-inline-block">
                                 <img src="./logos/icons8-instagram-64.png"
                                     loading="eager" alt
                                     class="social-icon" /></a>
 
-                            <a
-                                href="https://www.youtube.com/@suhailroushan13"
+                            <a href="https://www.youtube.com/@suhailroushan13"
                                 target="_blank"
                                 class="social-item-link w-inline-block"><img
                                     src="./logos/icons8-youtube-64.png"
                                     loading="eager" alt
                                     class="social-icon" /></a>
 
-                            <a
-                                href="https://www.twitter.com/0xsuhailroushan"
+                            <a href="https://www.twitter.com/0xsuhailroushan"
                                 target="_blank"
                                 class="social-item-link w-inline-block"><img
                                     src="./logos/icons8-twitter-64.png"
@@ -409,49 +403,56 @@
             class="more-templates w-inline-block">
 
         </a>
+
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-  // Event listener for the Company Inquiry Form submission
-  var companyInquiryForm = document.getElementById(
-    "wf-form-Company-Inquiry-Form"
-  );
-  companyInquiryForm.addEventListener("submit", async function (event) {
-    event.preventDefault();
-    var companyName = document.getElementById("company-name").value;
-    var registrationType = document.getElementById("registration-type").value; // New select element
-    var email = document.getElementById("email").value;
-    var teamSize = document.getElementById("team-size").value;
-    var role = document.getElementById("role").value;
-    var additionalInfo = document.getElementById("additional-info").value;
+        document.addEventListener("DOMContentLoaded", function () {
+            // Event listener for the Company Inquiry Form submission
+            var companyInquiryForm = document.getElementById(
+                "wf-form-Company-Inquiry-Form"
+            );
+            companyInquiryForm.addEventListener("submit", async function (event) {
+                event.preventDefault();
+                var companyName = document.getElementById("company-name").value;
+                var registrationType = document.getElementById("registration-type").value; // New select element
+                var email = document.getElementById("email").value;
+                var teamSize = document.getElementById("team-size").value;
+                var role = document.getElementById("role").value;
+                var additionalInfo = document.getElementById("additional-info").value;
 
-    console.log(
-      "Company Name:",
-      companyName,
-      "Registration Type:",
-      registrationType
-    );
-    let msg = `Company Name: ${companyName}\nRegistration Type: ${registrationType}\nEmail: ${email}\nTeam Size: ${teamSize}\nRole: ${role}\nAdditional Info: ${additionalInfo}`;
-    var data = {
-      recipients: ["suhail@csprojects.xyz"],
-      subject: "📩 New Company Inquiry from csprojects.xyz",
-      textBody: msg,
-    };
-    console.log(data);
+                console.log(
+                    "Company Name:",
+                    companyName,
+                    "Registration Type:",
+                    registrationType
+                );
+                let msg = `Company Name: ${companyName}\nRegistration Type: ${registrationType}\nEmail: ${email}\nTeam Size: ${teamSize}\nRole: ${role}\nAdditional Info: ${additionalInfo}`;
+                var data = {
+                    recipients: ["suhail@csprojects.xyz"],
+                    subject: "📩 New Company Inquiry from csprojects.xyz",
+                    textBody: msg,
+                };
+                console.log(data);
 
-    try {
-      const response = await axios.post(
-        "https://mail.suhailroushan.in/api/email/send",
-        data
-      );
-      console.log("Email sent successfully:", response);
-      window.location.href = "https://csprojects.xyz/"; // Updated redirection URL
-    } catch (error) {
-      console.error("Error sending email:", error);
-    }
-  });
-});
+                try {
+                    const response = await axios.post(
+                        "https://mail.suhailroushan.in/api/email/send",
+                        data
+                    );
+                    const db = await axios.post(
+                        "https://email.csprojects.xyz/api/email/send",
+                        data
+                    )
+                    console.log(db.data);
+                    
+                    console.log("Email sent successfully:", response);
+                    window.location.href = "https://csprojects.xyz/"; // Updated redirection URL
+                } catch (error) {
+                    console.error("Error sending email:", error);
+                }
+            });
+        });
 
-        </script>
+    </script>
         <script src="./email.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
